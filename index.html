@@ -6,7 +6,7 @@
     <title>Kapper Karim | Authentieke Herenkapper & Barbershop in Breda (Haagdijk 125)</title>
     <meta name="description" content="Kapper Karim aan de Haagdijk 125 in Breda. Specialist in strakke skin fades, klassieke herensnitten en traditionele baardverzorging met het open mes. Loop binnen of bel.">
     
-    <!-- Google Fonts: Oswald (strakke, mannelijke koppen) & Plus Jakarta Sans (heldere bodytekst) -->
+    <!-- Google Fonts: Oswald (strakke koppen) & Plus Jakarta Sans (heldere bodytekst) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,27 +14,26 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Tailwind Configuratie voor authentieke Barbershop Lounge kleuren & typografie -->
+    <!-- Tailwind Configuratie afgestemd op het lichte bord met korenblauw/lavendelblauw -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        charcoal: {
-                            950: '#0c0c0c',
-                            900: '#121212', // Hoofd achtergrondkleur
-                            800: '#1a1a1a', // Kaart achtergrondkleur
-                            700: '#262626', // Borders & subtiele accenten
+                        ice: {
+                            50: '#F5F8FC',  // Hoofachtergrond: zacht, fris lichtblauw
+                            100: '#EAF0F8', // Sectie-afwisseling
+                            200: '#D5E2F0', // Subtiele borders
+                            300: '#BDD2E8',
                         },
-                        amber: {
-                            500: '#f59e0b',
-                            600: '#d97706', // Primair ambachtelijk goud/amber accent
-                            700: '#b45309',
-                        },
-                        stone: {
-                            100: '#f5f5f4',
-                            300: '#d6d3d1',
-                            400: '#a8a29e',
+                        brand: {
+                            100: '#E8ECFA', // Zachte badge achtergrond
+                            300: '#9BAAE0', // Secundair accent
+                            500: '#5F72C4',
+                            600: '#4D60B5', // Het kenmerkende bord-blauw
+                            700: '#3D4E99', // Donkerder blauw voor knoppen en acties
+                            800: '#2F3C78',
+                            950: '#141B38', // Diep marineblauw voor koppen en tekst
                         }
                     },
                     fontFamily: {
@@ -47,65 +46,53 @@
     </script>
 
     <style>
-        /* Subtiele ambachtelijke styling & custom scrollbar */
         body {
-            background-color: #121212;
-            color: #f5f5f4;
+            background-color: #F5F8FC;
+            color: #141B38;
             overflow-x: hidden;
         }
         
-        /* Subtiel barber-patroon lijntje boven de pagina */
+        /* Subtiel barber-patroon in het bord-blauw en zacht ijsblauw */
         .barber-top-line {
             background: repeating-linear-gradient(
                 45deg,
-                #d97706,
-                #d97706 15px,
-                #1a1a1a 15px,
-                #1a1a1a 30px,
-                #78350f 30px,
-                #78350f 45px,
-                #1a1a1a 45px,
-                #1a1a1a 60px
+                #4D60B5,
+                #4D60B5 15px,
+                #F5F8FC 15px,
+                #F5F8FC 30px,
+                #9BAAE0 30px,
+                #9BAAE0 45px,
+                #F5F8FC 45px,
+                #F5F8FC 60px
             );
             height: 4px;
             width: 100%;
         }
 
-        /* Gestippelde prijslijn zoals op een klassieke barbershop menukaart */
+        /* Gestippelde prijslijn in fris blauwgrijs */
         .price-dots {
-            background-image: radial-gradient(circle, #44403c 1px, transparent 1px);
+            background-image: radial-gradient(circle, #CBD5E1 1px, transparent 1px);
             background-position: bottom;
             background-size: 8px 1px;
             background-repeat: repeat-x;
         }
-
-        /* Donkere kaartstijl voor Google Maps iframe die oplicht bij interactie */
-        .map-dark-filter {
-            filter: grayscale(100%) invert(92%) contrast(88%);
-            transition: filter 0.35s ease;
-        }
-        .map-dark-filter:hover {
-            filter: grayscale(20%) invert(0%) contrast(100%);
-        }
     </style>
 </head>
-<body class="font-sans antialiased selection:bg-amber-600 selection:text-white">
+<body class="font-sans antialiased selection:bg-brand-600 selection:text-white">
 
-    <!-- Subtiele ambachtelijke top-accentlijn -->
     <div class="barber-top-line"></div>
 
     <!-- ==========================================
          1. HEADER & STICKY NAVIGATIE
     =========================================== -->
-    <header id="header" class="sticky top-0 z-50 bg-charcoal-900/90 backdrop-blur-md border-b border-charcoal-700 transition-all duration-200">
+    <header id="header" class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-ice-200 transition-all duration-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 
                 <!-- Logo / Woordmerk -->
                 <a href="#" class="flex items-center gap-3 group focus:outline-none">
-                    <div class="w-11 h-11 rounded-lg bg-charcoal-800 border border-charcoal-700 group-hover:border-amber-600 flex items-center justify-center transition-colors">
-                        <!-- Klassiek Schaar / Scheermes SVG Icoon -->
-                        <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                    <div class="w-11 h-11 rounded-lg bg-ice-100 border border-ice-200 group-hover:border-brand-600 flex items-center justify-center transition-colors">
+                        <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
                             <circle cx="6" cy="6" r="3"></circle>
                             <circle cx="6" cy="18" r="3"></circle>
                             <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
@@ -114,10 +101,10 @@
                         </svg>
                     </div>
                     <div>
-                        <span class="font-display text-2xl font-bold tracking-wider text-stone-100 block leading-none">
-                            KAPPER <span class="text-amber-600">KARIM</span>
+                        <span class="font-display text-2xl font-bold tracking-wider text-brand-950 block leading-none">
+                            KAPPER <span class="text-brand-600">KARIM</span>
                         </span>
-                        <span class="text-[11px] uppercase tracking-[0.2em] text-stone-400 block mt-1">
+                        <span class="text-[11px] uppercase tracking-[0.2em] text-slate-500 block mt-1 font-semibold">
                             Haagdijk • Breda
                         </span>
                     </div>
@@ -125,16 +112,16 @@
 
                 <!-- Desktop Navigatie Links -->
                 <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#diensten" class="text-sm font-medium text-stone-300 hover:text-amber-500 transition-colors">Diensten & Prijzen</a>
-                    <a href="#impressie" class="text-sm font-medium text-stone-300 hover:text-amber-500 transition-colors">Impressie</a>
-                    <a href="#reviews" class="text-sm font-medium text-stone-300 hover:text-amber-500 transition-colors">Reviews</a>
-                    <a href="#locatie" class="text-sm font-medium text-stone-300 hover:text-amber-500 transition-colors">Openingstijden & Locatie</a>
-                    <a href="#contact" class="text-sm font-medium text-stone-300 hover:text-amber-500 transition-colors">Contact</a>
+                    <a href="#diensten" class="text-sm font-semibold text-slate-700 hover:text-brand-600 transition-colors">Diensten &amp; Prijzen</a>
+                    <a href="#impressie" class="text-sm font-semibold text-slate-700 hover:text-brand-600 transition-colors">Impressie</a>
+                    <a href="#reviews" class="text-sm font-semibold text-slate-700 hover:text-brand-600 transition-colors">Reviews</a>
+                    <a href="#locatie" class="text-sm font-semibold text-slate-700 hover:text-brand-600 transition-colors">Openingstijden &amp; Locatie</a>
+                    <a href="#contact" class="text-sm font-semibold text-slate-700 hover:text-brand-600 transition-colors">Contact</a>
                 </nav>
 
                 <!-- Directe CTA Knop (Desktop) -->
                 <div class="hidden md:flex items-center gap-3">
-                    <a href="tel:0761234567" class="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-charcoal-950 font-bold text-sm px-5 py-2.5 rounded-lg transition-all shadow-sm">
+                    <a href="tel:0659118829" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-all shadow-sm">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
                         </svg>
@@ -144,7 +131,7 @@
 
                 <!-- Mobiele Hamburger Knop -->
                 <div class="flex md:hidden">
-                    <button id="mobile-menu-btn" type="button" aria-label="Menu openen" class="p-2.5 rounded-lg bg-charcoal-800 border border-charcoal-700 text-stone-300 hover:text-amber-500 focus:outline-none">
+                    <button id="mobile-menu-btn" type="button" aria-label="Menu openen" class="p-2.5 rounded-lg bg-white border border-ice-200 text-slate-700 hover:text-brand-600 focus:outline-none shadow-sm">
                         <svg id="menu-icon-open" class="w-6 h-6 block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
                         </svg>
@@ -157,18 +144,18 @@
         </div>
 
         <!-- Mobiel Uitklapmenu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-charcoal-800 border-b border-charcoal-700 px-4 pt-3 pb-6 space-y-3">
-            <a href="#diensten" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-stone-200 hover:bg-charcoal-700 hover:text-amber-500">Diensten & Prijzen</a>
-            <a href="#impressie" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-stone-200 hover:bg-charcoal-700 hover:text-amber-500">Foto-impressie</a>
-            <a href="#reviews" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-stone-200 hover:bg-charcoal-700 hover:text-amber-500">Google Reviews</a>
-            <a href="#locatie" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-stone-200 hover:bg-charcoal-700 hover:text-amber-500">Openingstijden & Locatie</a>
-            <a href="#contact" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-stone-200 hover:bg-charcoal-700 hover:text-amber-500">Contact & Afspraak</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-ice-200 px-4 pt-3 pb-6 space-y-3 shadow-lg">
+            <a href="#diensten" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-ice-50 hover:text-brand-600">Diensten &amp; Prijzen</a>
+            <a href="#impressie" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-ice-50 hover:text-brand-600">Foto-impressie</a>
+            <a href="#reviews" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-ice-50 hover:text-brand-600">Google Reviews</a>
+            <a href="#locatie" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-ice-50 hover:text-brand-600">Openingstijden &amp; Locatie</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-ice-50 hover:text-brand-600">Contact &amp; Afspraak</a>
             <div class="pt-2">
-                <a href="tel:0761234567" class="w-full flex items-center justify-center gap-2 bg-amber-600 hover:bg-amber-500 text-charcoal-950 font-bold text-base px-5 py-3 rounded-lg">
+                <a href="tel:0659118829" class="w-full flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold text-base px-5 py-3 rounded-lg shadow-sm">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
                     </svg>
-                    <span>Bel Direct: 076 - 123 45 67</span>
+                    <span>Bel Direct: 06 - 59 11 88 29</span>
                 </a>
             </div>
         </div>
@@ -178,90 +165,80 @@
         <!-- ==========================================
              2. HERO SECTIE & USP BALK
         =========================================== -->
-        <section class="relative overflow-hidden pt-10 pb-16 lg:py-24 border-b border-charcoal-700">
-            <!-- Subtiele donkere achtergrondfoto met zware overlay voor authentieke sfeer -->
-            <div class="absolute inset-0 z-0">
-                <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1920&q=80" 
-                     alt="Kapper Karim Barbershop Interieur Breda" 
-                     class="w-full h-full object-cover object-center opacity-20"
-                     onerror="this.style.display='none'">
-                <div class="absolute inset-0 bg-gradient-to-r from-charcoal-900 via-charcoal-900/95 to-charcoal-900/75"></div>
-            </div>
-
-            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="relative overflow-hidden pt-12 pb-16 lg:py-24 border-b border-ice-200 bg-gradient-to-b from-white via-ice-50 to-ice-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     
                     <!-- Linker kolom: Copy & CTA's -->
                     <div class="lg:col-span-7 space-y-6">
                         
                         <!-- Locatie Badge + Dynamische Open/Gesloten Status -->
-                        <div class="inline-flex flex-wrap items-center gap-3 px-3.5 py-1.5 rounded-lg bg-charcoal-800 border border-charcoal-700 text-xs sm:text-sm text-stone-300">
-                            <span class="flex items-center gap-1.5 font-medium text-amber-500">
+                        <div class="inline-flex flex-wrap items-center gap-3 px-3.5 py-1.5 rounded-lg bg-white border border-ice-200 shadow-sm text-xs sm:text-sm text-slate-700">
+                            <span class="flex items-center gap-1.5 font-semibold text-brand-600">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
                                 </svg>
                                 Haagdijk 125 • Breda Centrum
                             </span>
-                            <span class="text-charcoal-700">|</span>
-                            <span id="live-status-badge" class="flex items-center gap-1.5 font-medium text-stone-300">
+                            <span class="text-slate-300">|</span>
+                            <span id="live-status-badge" class="flex items-center gap-1.5 font-medium text-slate-700">
                                 <span id="status-dot" class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                 <span id="status-text">Vandaag geopend</span>
                             </span>
                         </div>
 
-                        <!-- Krachtige Headline -->
-                        <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold uppercase tracking-tight text-stone-100 leading-[1.05]">
-                            Vakmanschap, <span class="text-amber-600">Strakke Fades</span> &amp; Scherpe Contouren.
+                        <!-- Headline -->
+                        <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold uppercase tracking-tight text-brand-950 leading-[1.05]">
+                            Vakmanschap, <span class="text-brand-600">Strakke Fades</span> &amp; Scherpe Contouren.
                         </h1>
 
-                        <!-- No-nonsense introductie -->
-                        <p class="text-base sm:text-lg text-stone-300 max-w-2xl leading-relaxed">
+                        <!-- Introductie -->
+                        <p class="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
                             Geen haastwerk, maar eerlijk ambacht aan de Haagdijk in Breda. Bij Kapper Karim zit je goed voor een naadloze skin fade, een klassiek herenkapsel of een traditionele baardbehandeling met het open mes en een warme handdoek.
                         </p>
 
-                        <!-- Twee duidelijke actieknoppen -->
+                        <!-- Twee actieknoppen -->
                         <div class="flex flex-col sm:flex-row gap-4 pt-2">
-                            <a href="#diensten" class="inline-flex items-center justify-center gap-2 bg-amber-600 hover:bg-amber-500 text-charcoal-950 font-bold text-base px-7 py-4 rounded-lg transition-all">
+                            <a href="#diensten" class="inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold text-base px-7 py-4 rounded-lg transition-all shadow-md hover:shadow-lg">
                                 <span>Bekijk Tarieven</span>
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"/>
                                 </svg>
                             </a>
-                            <a href="#locatie" class="inline-flex items-center justify-center gap-2 bg-charcoal-800 hover:bg-charcoal-700 text-stone-100 border border-charcoal-700 font-semibold text-base px-7 py-4 rounded-lg transition-all">
-                                <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <a href="#locatie" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-ice-50 text-slate-800 border border-ice-200 font-semibold text-base px-7 py-4 rounded-lg transition-all shadow-sm">
+                                <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"/>
                                 </svg>
                                 <span>Routebeschrijving</span>
                             </a>
                         </div>
 
-                        <!-- Snelle social proof onder de knoppen -->
-                        <div class="pt-4 flex items-center gap-4 text-sm text-stone-400">
+                        <!-- Social proof -->
+                        <div class="pt-4 flex items-center gap-4 text-sm text-slate-600">
                             <div class="flex text-amber-500" aria-label="5 van de 5 sterren">
                                 ★★★★★
                             </div>
-                            <span><strong class="text-stone-200">4.9 / 5.0</strong> op Google Reviews door vaste klanten uit Breda</span>
+                            <span><strong class="text-brand-950 font-bold">4.9 / 5.0</strong> op Google Reviews door vaste klanten uit Breda</span>
                         </div>
                     </div>
 
-                    <!-- Rechter kolom: Sfeerbeeld / Ambacht kaart -->
+                    <!-- Rechter kolom: Sfeerbeeld kaart -->
                     <div class="lg:col-span-5">
-                        <div class="relative rounded-xl overflow-hidden border border-charcoal-700 bg-charcoal-800 shadow-2xl">
+                        <div class="relative rounded-2xl overflow-hidden border border-ice-200 bg-white shadow-xl">
                             <div class="aspect-[4/5] w-full relative">
-                                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=85" 
+                                <img src="assets/karimFront.jpeg" 
                                      alt="Barbier aan het werk met open mes en fade" 
                                      class="w-full h-full object-cover"
-                                     onerror="this.src='https://placehold.co/720x900/1a1a1a/d97706?text=Kapper+Karim+Breda'">
-                                <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-transparent to-transparent"></div>
+                                     onerror="this.src='https://placehold.co/720x900/EAF0F8/4D60B5?text=Kapper+Karim+Breda'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-950/70 via-transparent to-transparent"></div>
                                 
-                                <!-- Ambachtelijk label onderin de foto -->
-                                <div class="absolute bottom-4 left-4 right-4 bg-charcoal-900/95 backdrop-blur-md border border-charcoal-700 p-4 rounded-lg flex items-center justify-between">
+                                <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md border border-ice-200 p-4 rounded-xl flex items-center justify-between shadow-md">
                                     <div>
-                                        <p class="text-xs uppercase tracking-widest text-amber-500 font-semibold">Zonder afspraak of op tijdstip</p>
-                                        <p class="text-stone-100 font-display text-lg uppercase tracking-wide mt-0.5">Loop gerust binnen aan de Haagdijk</p>
+                                        <p class="text-xs uppercase tracking-widest text-brand-600 font-bold">Zonder afspraak of op tijdstip</p>
+                                        <p class="text-brand-950 font-display text-lg uppercase tracking-wide mt-0.5">Loop gerust binnen aan de Haagdijk</p>
                                     </div>
-                                    <a href="tel:0761234567" aria-label="Bel Kapper Karim" class="w-11 h-11 rounded-lg bg-amber-600 hover:bg-amber-500 text-charcoal-950 flex items-center justify-center shrink-0 transition-colors">
+                                    <a href="tel:0659118829" aria-label="Bel Kapper Karim" class="w-11 h-11 rounded-lg bg-brand-600 hover:bg-brand-700 text-white flex items-center justify-center shrink-0 transition-colors shadow-sm">
                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
                                         </svg>
@@ -276,44 +253,44 @@
         </section>
 
         <!-- USP Balk onder de Hero -->
-        <section aria-label="Kernwaarden van Kapper Karim" class="bg-charcoal-800 border-b border-charcoal-700 py-5">
+        <section aria-label="Kernwaarden van Kapper Karim" class="bg-white border-b border-ice-200 py-6">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                     
                     <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-lg bg-charcoal-900 border border-charcoal-700 flex items-center justify-center text-amber-500 shrink-0">
+                        <div class="w-10 h-10 rounded-lg bg-ice-100 border border-ice-200 flex items-center justify-center text-brand-600 shrink-0">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
                         </div>
-                        <span class="text-sm font-medium text-stone-200">Zonder afspraak binnenlopen of bellen</span>
+                        <span class="text-sm font-semibold text-slate-800">Zonder afspraak binnenlopen of bellen</span>
                     </div>
 
                     <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-lg bg-charcoal-900 border border-charcoal-700 flex items-center justify-center text-amber-500 shrink-0">
+                        <div class="w-10 h-10 rounded-lg bg-ice-100 border border-ice-200 flex items-center justify-center text-brand-600 shrink-0">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
                         </div>
-                        <span class="text-sm font-medium text-stone-200">Strakke Skin Fades &amp; Contouren</span>
+                        <span class="text-sm font-semibold text-slate-800">Strakke Overloop &amp; Contouren</span>
                     </div>
 
                     <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-lg bg-charcoal-900 border border-charcoal-700 flex items-center justify-center text-amber-500 shrink-0">
+                        <div class="w-10 h-10 rounded-lg bg-ice-100 border border-ice-200 flex items-center justify-center text-brand-600 shrink-0">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"/>
                             </svg>
                         </div>
-                        <span class="text-sm font-medium text-stone-200">Traditioneel scheren met warme doek</span>
+                        <span class="text-sm font-semibold text-slate-800">Traditioneel scheren met warme doek</span>
                     </div>
 
                     <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-lg bg-charcoal-900 border border-charcoal-700 flex items-center justify-center text-amber-500 shrink-0">
+                        <div class="w-10 h-10 rounded-lg bg-ice-100 border border-ice-200 flex items-center justify-center text-brand-600 shrink-0">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zm4-7v3m4-3v3m4-3v3"/>
                             </svg>
                         </div>
-                        <span class="text-sm font-medium text-stone-200">Verse koffie of thee staat altijd klaar</span>
+                        <span class="text-sm font-semibold text-slate-800">Verse koffie of thee staat altijd klaar</span>
                     </div>
 
                 </div>
@@ -323,144 +300,142 @@
         <!-- ==========================================
              3. DIENSTEN & TARIEVEN (PRIJZENKAART)
         =========================================== -->
-        <section id="diensten" class="py-20 lg:py-28 border-b border-charcoal-700">
+        <section id="diensten" class="py-20 lg:py-28 border-b border-ice-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <!-- Sectie Kop -->
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
                     <div>
-                        <span class="text-amber-500 text-xs font-bold uppercase tracking-[0.2em] block mb-2">Transparante Tarieven</span>
-                        <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase tracking-tight text-stone-100">
+                        <span class="text-brand-600 text-xs font-bold uppercase tracking-[0.2em] block mb-2">Transparante Tarieven</span>
+                        <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase tracking-tight text-brand-950">
                             Diensten &amp; Prijzenkaart
                         </h2>
                     </div>
-                    <p class="text-stone-400 text-sm sm:text-base max-w-md">
+                    <p class="text-slate-600 text-sm sm:text-base max-w-md">
                         Elke knip- of baardbehandeling wordt afgesloten met nek- en oorcontouren met het mes, verzorgende aftershave en styling naar wens.
                     </p>
                 </div>
 
-                <!-- Grid met 6 duidelijke behandelkaarten -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
                     <!-- Kaart 1: Heren Knippen -->
-                    <div class="bg-charcoal-800 border border-charcoal-700 hover:border-amber-600/60 rounded-xl p-6 flex flex-col justify-between transition-all">
+                    <div class="bg-white border border-ice-200 hover:border-brand-600/50 rounded-xl p-6 flex flex-col justify-between transition-all shadow-sm hover:shadow-md">
                         <div>
                             <div class="flex items-baseline justify-between gap-2 mb-3">
-                                <h3 class="font-display text-xl font-bold uppercase tracking-wide text-stone-100">Heren Knippen</h3>
-                                <span class="font-display text-2xl font-bold text-amber-500 shrink-0">€ 25,-</span>
+                                <h3 class="font-display text-xl font-bold uppercase tracking-wide text-brand-950">Heren Knippen</h3>
+                                <span class="font-display text-2xl font-bold text-brand-600 shrink-0">€ 25,-</span>
                             </div>
                             <div class="price-dots h-1 w-full mb-4"></div>
-                            <span class="inline-block text-xs font-medium text-stone-400 bg-charcoal-900 border border-charcoal-700 px-2.5 py-1 rounded mb-3">
+                            <span class="inline-block text-xs font-medium text-slate-600 bg-ice-50 border border-ice-200 px-2.5 py-1 rounded mb-3">
                                 ± 30 minuten
                             </span>
-                            <p class="text-sm text-stone-300 leading-relaxed">
+                            <p class="text-sm text-slate-600 leading-relaxed">
                                 Persoonlijk advies, knippen met schaar en/of tondeuse, nek- en bakkebaardcontouren met het mes, eventueel wassen en in model föhnen met pomade of clay.
                             </p>
                         </div>
-                        <button type="button" onclick="selectService('Heren Knippen (€ 25,-)')" class="mt-6 w-full py-2.5 px-4 rounded-lg bg-charcoal-900 hover:bg-amber-600 hover:text-charcoal-950 text-stone-200 border border-charcoal-700 hover:border-amber-600 text-sm font-semibold transition-all">
+                        <button type="button" onclick="selectService('Heren Knippen (€ 25,-)')" class="mt-6 w-full py-2.5 px-4 rounded-lg bg-ice-50 hover:bg-brand-600 hover:text-white text-slate-800 border border-ice-200 hover:border-brand-600 text-sm font-semibold transition-all">
                             Kies deze behandeling
                         </button>
                     </div>
 
                     <!-- Kaart 2: Skin Fade / Opscheren -->
-                    <div class="bg-charcoal-800 border border-charcoal-700 hover:border-amber-600/60 rounded-xl p-6 flex flex-col justify-between transition-all">
+                    <div class="bg-white border border-ice-200 hover:border-brand-600/50 rounded-xl p-6 flex flex-col justify-between transition-all shadow-sm hover:shadow-md">
                         <div>
                             <div class="flex items-baseline justify-between gap-2 mb-3">
-                                <h3 class="font-display text-xl font-bold uppercase tracking-wide text-stone-100">Skin Fade / Opscheren</h3>
-                                <span class="font-display text-2xl font-bold text-amber-500 shrink-0">€ 27,-</span>
+                                <h3 class="font-display text-xl font-bold uppercase tracking-wide text-brand-950">Skin Fade / Opscheren</h3>
+                                <span class="font-display text-2xl font-bold text-brand-600 shrink-0">€ 27,-</span>
                             </div>
                             <div class="price-dots h-1 w-full mb-4"></div>
-                            <span class="inline-block text-xs font-medium text-stone-400 bg-charcoal-900 border border-charcoal-700 px-2.5 py-1 rounded mb-3">
+                            <span class="inline-block text-xs font-medium text-slate-600 bg-ice-50 border border-ice-200 px-2.5 py-1 rounded mb-3">
                                 ± 35 minuten • Specialist
                             </span>
-                            <p class="text-sm text-stone-300 leading-relaxed">
-                                Naadloze overloop vanaf nul (low, mid, high of drop fade) met foil shaver en open mes, inclusief bovenkant op lengte knippen en strakke haarlijn.
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Naadloze overloop vanaf nul (low, mid, high of drop fade) met foil shaver, inclusief bovenkant op lengte knippen en strakke haarlijn.
                             </p>
                         </div>
-                        <button type="button" onclick="selectService('Skin Fade / Opscheren (€ 27,-)')" class="mt-6 w-full py-2.5 px-4 rounded-lg bg-charcoal-900 hover:bg-amber-600 hover:text-charcoal-950 text-stone-200 border border-charcoal-700 hover:border-amber-600 text-sm font-semibold transition-all">
+                        <button type="button" onclick="selectService('Skin Fade / Opscheren (€ 27,-)')" class="mt-6 w-full py-2.5 px-4 rounded-lg bg-ice-50 hover:bg-brand-600 hover:text-white text-slate-800 border border-ice-200 hover:border-brand-600 text-sm font-semibold transition-all">
                             Kies deze behandeling
                         </button>
                     </div>
 
-                    <!-- Kaart 3: Combi Deal (Meest Gekozen) -->
-                    <div class="bg-charcoal-800 border-2 border-amber-600 rounded-xl p-6 flex flex-col justify-between relative shadow-lg">
-                        <div class="absolute -top-3 right-4 bg-amber-600 text-charcoal-950 text-[11px] font-bold uppercase tracking-wider px-3 py-0.5 rounded">
+                    <!-- Kaart 3: Combi Deal (Meest gekozen) -->
+                    <div class="bg-white border-2 border-brand-600 rounded-xl p-6 flex flex-col justify-between relative shadow-md">
+                        <div class="absolute -top-3 right-4 bg-brand-600 text-white text-[11px] font-bold uppercase tracking-wider px-3 py-0.5 rounded shadow-sm">
                             Meest Gekozen
                         </div>
                         <div>
                             <div class="flex items-baseline justify-between gap-2 mb-3">
-                                <h3 class="font-display text-xl font-bold uppercase tracking-wide text-stone-100">Combi: Knippen &amp; Baard</h3>
-                                <span class="font-display text-2xl font-bold text-amber-500 shrink-0">€ 38,-</span>
+                                <h3 class="font-display text-xl font-bold uppercase tracking-wide text-brand-950">Combi: Knippen &amp; Baard</h3>
+                                <span class="font-display text-2xl font-bold text-brand-600 shrink-0">€ 38,-</span>
                             </div>
                             <div class="price-dots h-1 w-full mb-4"></div>
-                            <span class="inline-block text-xs font-medium text-amber-500 bg-charcoal-900 border border-amber-600/40 px-2.5 py-1 rounded mb-3">
+                            <span class="inline-block text-xs font-semibold text-brand-700 bg-brand-100 border border-brand-200 px-2.5 py-1 rounded mb-3">
                                 ± 45 - 50 minuten • Compleet
                             </span>
-                            <p class="text-sm text-stone-300 leading-relaxed">
+                            <p class="text-sm text-slate-600 leading-relaxed">
                                 De volledige behandeling: knippen of skin fade, baard in vorm trimmen, strakke contouren met het open mes, ontspannende warme handdoek, baardolie en styling.
                             </p>
                         </div>
-                        <button type="button" onclick="selectService('Combi: Knippen & Baard (€ 38,-)')" class="mt-6 w-full py-2.5 px-4 rounded-lg bg-amber-600 hover:bg-amber-500 text-charcoal-950 text-sm font-bold transition-all">
+                        <button type="button" onclick="selectService('Combi: Knippen & Baard (€ 38,-)')" class="mt-6 w-full py-2.5 px-4 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-sm font-bold transition-all shadow-sm">
                             Kies Combi Behandeling
                         </button>
                     </div>
 
                     <!-- Kaart 4: Baard Trimmen & Contouren -->
-                    <div class="bg-charcoal-800 border border-charcoal-700 hover:border-amber-600/60 rounded-xl p-6 flex flex-col justify-between transition-all">
+                    <div class="bg-white border border-ice-200 hover:border-brand-600/50 rounded-xl p-6 flex flex-col justify-between transition-all shadow-sm hover:shadow-md">
                         <div>
                             <div class="flex items-baseline justify-between gap-2 mb-3">
-                                <h3 class="font-display text-xl font-bold uppercase tracking-wide text-stone-100">Baard &amp; Hot Towel</h3>
-                                <span class="font-display text-2xl font-bold text-amber-500 shrink-0">€ 18,-</span>
+                                <h3 class="font-display text-xl font-bold uppercase tracking-wide text-brand-950">Baard &amp; Hot Towel</h3>
+                                <span class="font-display text-2xl font-bold text-brand-600 shrink-0">€ 18,-</span>
                             </div>
                             <div class="price-dots h-1 w-full mb-4"></div>
-                            <span class="inline-block text-xs font-medium text-stone-400 bg-charcoal-900 border border-charcoal-700 px-2.5 py-1 rounded mb-3">
+                            <span class="inline-block text-xs font-medium text-slate-600 bg-ice-50 border border-ice-200 px-2.5 py-1 rounded mb-3">
                                 ± 20 minuten
                             </span>
-                            <p class="text-sm text-stone-300 leading-relaxed">
+                            <p class="text-sm text-slate-600 leading-relaxed">
                                 Baard op lengte en symmetrisch in vorm brengen, strakke wang- en neklijnen uitscheren met het mes, warme handdoek en voedende baardbalsem.
                             </p>
                         </div>
-                        <button type="button" onclick="selectService('Baard Trimmen & Contouren (€ 18,-)')" class="mt-6 w-full py-2.5 px-4 rounded-lg bg-charcoal-900 hover:bg-amber-600 hover:text-charcoal-950 text-stone-200 border border-charcoal-700 hover:border-amber-600 text-sm font-semibold transition-all">
+                        <button type="button" onclick="selectService('Baard Trimmen & Contouren (€ 18,-)')" class="mt-6 w-full py-2.5 px-4 rounded-lg bg-ice-50 hover:bg-brand-600 hover:text-white text-slate-800 border border-ice-200 hover:border-brand-600 text-sm font-semibold transition-all">
                             Kies deze behandeling
                         </button>
                     </div>
 
                     <!-- Kaart 5: Kinderen / Jeugd -->
-                    <div class="bg-charcoal-800 border border-charcoal-700 hover:border-amber-600/60 rounded-xl p-6 flex flex-col justify-between transition-all">
+                    <div class="bg-white border border-ice-200 hover:border-brand-600/50 rounded-xl p-6 flex flex-col justify-between transition-all shadow-sm hover:shadow-md">
                         <div>
                             <div class="flex items-baseline justify-between gap-2 mb-3">
-                                <h3 class="font-display text-xl font-bold uppercase tracking-wide text-stone-100">Kinderen t/m 12 Jaar</h3>
-                                <span class="font-display text-2xl font-bold text-amber-500 shrink-0">€ 20,-</span>
+                                <h3 class="font-display text-xl font-bold uppercase tracking-wide text-brand-950">Kinderen t/m 12 Jaar</h3>
+                                <span class="font-display text-2xl font-bold text-brand-600 shrink-0">€ 20,-</span>
                             </div>
                             <div class="price-dots h-1 w-full mb-4"></div>
-                            <span class="inline-block text-xs font-medium text-stone-400 bg-charcoal-900 border border-charcoal-700 px-2.5 py-1 rounded mb-3">
+                            <span class="inline-block text-xs font-medium text-slate-600 bg-ice-50 border border-ice-200 px-2.5 py-1 rounded mb-3">
                                 ± 25 minuten
                             </span>
-                            <p class="text-sm text-stone-300 leading-relaxed">
+                            <p class="text-sm text-slate-600 leading-relaxed">
                                 Geduldig en netjes geknipt voor de jongste heren. Van frisse schoolkapsels tot een stoere taper of overloop, afgemaakt met een beetje gel of wax.
                             </p>
                         </div>
-                        <button type="button" onclick="selectService('Kinderen t/m 12 Jaar (€ 20,-)')" class="mt-6 w-full py-2.5 px-4 rounded-lg bg-charcoal-900 hover:bg-amber-600 hover:text-charcoal-950 text-stone-200 border border-charcoal-700 hover:border-amber-600 text-sm font-semibold transition-all">
+                        <button type="button" onclick="selectService('Kinderen t/m 12 Jaar (€ 20,-)')" class="mt-6 w-full py-2.5 px-4 rounded-lg bg-ice-50 hover:bg-brand-600 hover:text-white text-slate-800 border border-ice-200 hover:border-brand-600 text-sm font-semibold transition-all">
                             Kies deze behandeling
                         </button>
                     </div>
 
                     <!-- Kaart 6: Contouren & Nek Bijwerken -->
-                    <div class="bg-charcoal-800 border border-charcoal-700 hover:border-amber-600/60 rounded-xl p-6 flex flex-col justify-between transition-all">
+                    <div class="bg-white border border-ice-200 hover:border-brand-600/50 rounded-xl p-6 flex flex-col justify-between transition-all shadow-sm hover:shadow-md">
                         <div>
                             <div class="flex items-baseline justify-between gap-2 mb-3">
-                                <h3 class="font-display text-xl font-bold uppercase tracking-wide text-stone-100">Contouren &amp; Nek</h3>
-                                <span class="font-display text-2xl font-bold text-amber-500 shrink-0">€ 15,-</span>
+                                <h3 class="font-display text-xl font-bold uppercase tracking-wide text-brand-950">Contouren &amp; Nek</h3>
+                                <span class="font-display text-2xl font-bold text-brand-600 shrink-0">€ 15,-</span>
                             </div>
                             <div class="price-dots h-1 w-full mb-4"></div>
-                            <span class="inline-block text-xs font-medium text-stone-400 bg-charcoal-900 border border-charcoal-700 px-2.5 py-1 rounded mb-3">
+                            <span class="inline-block text-xs font-medium text-slate-600 bg-ice-50 border border-ice-200 px-2.5 py-1 rounded mb-3">
                                 ± 15 minuten • Tussendoor
                             </span>
-                            <p class="text-sm text-stone-300 leading-relaxed">
+                            <p class="text-sm text-slate-600 leading-relaxed">
                                 Ideaal tussen twee knipbeurten door of vlak voor het weekend: neklijn, bakkebaarden en haarlijn rondom de oren weer haarscherp laten bijwerken.
                             </p>
                         </div>
-                        <button type="button" onclick="selectService('Contouren & Nek Bijwerken (€ 15,-)')" class="mt-6 w-full py-2.5 px-4 rounded-lg bg-charcoal-900 hover:bg-amber-600 hover:text-charcoal-950 text-stone-200 border border-charcoal-700 hover:border-amber-600 text-sm font-semibold transition-all">
+                        <button type="button" onclick="selectService('Contouren & Nek Bijwerken (€ 15,-)')" class="mt-6 w-full py-2.5 px-4 rounded-lg bg-ice-50 hover:bg-brand-600 hover:text-white text-slate-800 border border-ice-200 hover:border-brand-600 text-sm font-semibold transition-all">
                             Kies deze behandeling
                         </button>
                     </div>
@@ -472,110 +447,109 @@
         <!-- ==========================================
              4. FOTO-IMPRESSIE / PORTFOLIO
         =========================================== -->
-        <section id="impressie" class="py-20 lg:py-28 bg-charcoal-950 border-b border-charcoal-700">
+        <section id="impressie" class="py-20 lg:py-28 bg-ice-100 border-b border-ice-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
                     <div>
-                        <span class="text-amber-500 text-xs font-bold uppercase tracking-[0.2em] block mb-2">Ons Werk in de Stoel</span>
-                        <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase tracking-tight text-stone-100">
+                        <span class="text-brand-600 text-xs font-bold uppercase tracking-[0.2em] block mb-2">Ons Werk in de Stoel</span>
+                        <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase tracking-tight text-brand-950">
                             Impressie &amp; Stijlen
                         </h2>
                     </div>
-                    <p class="text-stone-400 text-sm sm:text-base max-w-md">
+                    <p class="text-slate-600 text-sm sm:text-base max-w-md">
                         Of je nu kiest voor een strakke crop, klassieke pompadour of een volle verzorgde baard: wij kijken wat past bij je gezichtsvorm en haargroei.
                     </p>
                 </div>
 
-                <!-- Responsive Fotogrid (1 col mobiel, 2 tablet, 3 desktop) -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                     <!-- Item 1 -->
-                    <div class="group relative aspect-[4/5] overflow-hidden rounded-lg bg-charcoal-800 border border-charcoal-700">
+                    <div class="group relative aspect-[4/5] overflow-hidden rounded-xl bg-white border border-ice-200 shadow-sm">
                         <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80" 
                              alt="Low Skin Fade & Textured Crop" 
                              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                             onerror="this.src='https://placehold.co/600x750/1a1a1a/d97706?text=Low+Skin+Fade'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/90 via-charcoal-950/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                             onerror="this.src='https://placehold.co/600x750/EAF0F8/4D60B5?text=Low+Skin+Fade'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-brand-950/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
                         <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                             <div>
-                                <span class="text-[11px] uppercase tracking-widest text-amber-500 font-semibold block">Fade Specialist</span>
-                                <h3 class="font-display text-lg font-bold uppercase text-stone-100">Low Skin Fade &amp; Crop</h3>
+                                <span class="text-[11px] uppercase tracking-widest text-brand-300 font-semibold block">Fade Specialist</span>
+                                <h3 class="font-display text-lg font-bold uppercase text-white">Low Skin Fade &amp; Crop</h3>
                             </div>
                         </div>
                     </div>
 
                     <!-- Item 2 -->
-                    <div class="group relative aspect-[4/5] overflow-hidden rounded-lg bg-charcoal-800 border border-charcoal-700">
+                    <div class="group relative aspect-[4/5] overflow-hidden rounded-xl bg-white border border-ice-200 shadow-sm">
                         <img src="https://images.unsplash.com/photo-1517832606699-7ae9b720a186?auto=format&fit=crop&w=800&q=80" 
                              alt="Beard Line-up & Hot Towel" 
                              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                             onerror="this.src='https://placehold.co/600x750/1a1a1a/d97706?text=Beard+Line-up'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/90 via-charcoal-950/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                             onerror="this.src='https://placehold.co/600x750/EAF0F8/4D60B5?text=Beard+Line-up'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-brand-950/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
                         <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                             <div>
-                                <span class="text-[11px] uppercase tracking-widest text-amber-500 font-semibold block">Open Mes &amp; Olie</span>
-                                <h3 class="font-display text-lg font-bold uppercase text-stone-100">Beard Line-up &amp; Hot Towel</h3>
+                                <span class="text-[11px] uppercase tracking-widest text-brand-300 font-semibold block">Open Mes &amp; Olie</span>
+                                <h3 class="font-display text-lg font-bold uppercase text-white">Beard Line-up &amp; Hot Towel</h3>
                             </div>
                         </div>
                     </div>
 
                     <!-- Item 3 -->
-                    <div class="group relative aspect-[4/5] overflow-hidden rounded-lg bg-charcoal-800 border border-charcoal-700">
+                    <div class="group relative aspect-[4/5] overflow-hidden rounded-xl bg-white border border-ice-200 shadow-sm">
                         <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80" 
                              alt="Classic Taper Fade" 
                              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                             onerror="this.src='https://placehold.co/600x750/1a1a1a/d97706?text=Classic+Taper'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/90 via-charcoal-950/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                             onerror="this.src='https://placehold.co/600x750/EAF0F8/4D60B5?text=Classic+Taper'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-brand-950/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
                         <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                             <div>
-                                <span class="text-[11px] uppercase tracking-widest text-amber-500 font-semibold block">Schaar &amp; Tondeuse</span>
-                                <h3 class="font-display text-lg font-bold uppercase text-stone-100">Classic Taper Fade</h3>
+                                <span class="text-[11px] uppercase tracking-widest text-brand-300 font-semibold block">Schaar &amp; Tondeuse</span>
+                                <h3 class="font-display text-lg font-bold uppercase text-white">Classic Taper Fade</h3>
                             </div>
                         </div>
                     </div>
 
                     <!-- Item 4 -->
-                    <div class="group relative aspect-[4/5] overflow-hidden rounded-lg bg-charcoal-800 border border-charcoal-700">
+                    <div class="group relative aspect-[4/5] overflow-hidden rounded-xl bg-white border border-ice-200 shadow-sm">
                         <img src="https://images.unsplash.com/photo-1621607512214-68297480165e?auto=format&fit=crop&w=800&q=80" 
                              alt="Mid Drop Fade" 
                              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                             onerror="this.src='https://placehold.co/600x750/1a1a1a/d97706?text=Mid+Drop+Fade'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/90 via-charcoal-950/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                             onerror="this.src='https://placehold.co/600x750/EAF0F8/4D60B5?text=Mid+Drop+Fade'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-brand-950/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
                         <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                             <div>
-                                <span class="text-[11px] uppercase tracking-widest text-amber-500 font-semibold block">Naadloze Overloop</span>
-                                <h3 class="font-display text-lg font-bold uppercase text-stone-100">Mid Drop Fade</h3>
+                                <span class="text-[11px] uppercase tracking-widest text-brand-300 font-semibold block">Naadloze Overloop</span>
+                                <h3 class="font-display text-lg font-bold uppercase text-white">Mid Drop Fade</h3>
                             </div>
                         </div>
                     </div>
 
                     <!-- Item 5 -->
-                    <div class="group relative aspect-[4/5] overflow-hidden rounded-lg bg-charcoal-800 border border-charcoal-700">
+                    <div class="group relative aspect-[4/5] overflow-hidden rounded-xl bg-white border border-ice-200 shadow-sm">
                         <img src="https://images.unsplash.com/photo-1534297635766-a262cdcb8ee4?auto=format&fit=crop&w=800&q=80" 
                              alt="Razor Sharp Contours" 
                              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                             onerror="this.src='https://placehold.co/600x750/1a1a1a/d97706?text=Razor+Sharp+Contours'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/90 via-charcoal-950/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                             onerror="this.src='https://placehold.co/600x750/EAF0F8/4D60B5?text=Razor+Sharp+Contours'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-brand-950/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
                         <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                             <div>
-                                <span class="text-[11px] uppercase tracking-widest text-amber-500 font-semibold block">Precisiewerk</span>
-                                <h3 class="font-display text-lg font-bold uppercase text-stone-100">Razor Sharp Contours</h3>
+                                <span class="text-[11px] uppercase tracking-widest text-brand-300 font-semibold block">Precisiewerk</span>
+                                <h3 class="font-display text-lg font-bold uppercase text-white">Razor Sharp Contours</h3>
                             </div>
                         </div>
                     </div>
 
                     <!-- Item 6 -->
-                    <div class="group relative aspect-[4/5] overflow-hidden rounded-lg bg-charcoal-800 border border-charcoal-700">
+                    <div class="group relative aspect-[4/5] overflow-hidden rounded-xl bg-white border border-ice-200 shadow-sm">
                         <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=800&q=80" 
                              alt="Modern Pompadour & Styling" 
                              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                             onerror="this.src='https://placehold.co/600x750/1a1a1a/d97706?text=Modern+Pompadour'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/90 via-charcoal-950/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                             onerror="this.src='https://placehold.co/600x750/EAF0F8/4D60B5?text=Modern+Pompadour'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-brand-950/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
                         <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                             <div>
-                                <span class="text-[11px] uppercase tracking-widest text-amber-500 font-semibold block">Klassiek &amp; Modern</span>
-                                <h3 class="font-display text-lg font-bold uppercase text-stone-100">Modern Pompadour</h3>
+                                <span class="text-[11px] uppercase tracking-widest text-brand-300 font-semibold block">Klassiek &amp; Modern</span>
+                                <h3 class="font-display text-lg font-bold uppercase text-white">Modern Pompadour</h3>
                             </div>
                         </div>
                     </div>
@@ -587,14 +561,12 @@
         <!-- ==========================================
              5. GOOGLE REVIEWS SECTIE
         =========================================== -->
-        <section id="reviews" class="py-20 lg:py-28 border-b border-charcoal-700">
+        <section id="reviews" class="py-20 lg:py-28 border-b border-ice-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <!-- Samenvattingsbadge & Kop -->
-                <div class="bg-charcoal-800 border border-charcoal-700 rounded-xl p-6 sm:p-8 mb-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                <div class="bg-white border border-ice-200 rounded-2xl p-6 sm:p-8 mb-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 shadow-sm">
                     <div class="flex flex-col sm:flex-row sm:items-center gap-5">
-                        <!-- Origineel Google 'G' Icoon -->
-                        <div class="w-14 h-14 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-md">
+                        <div class="w-14 h-14 rounded-xl bg-ice-50 border border-ice-200 flex items-center justify-center shrink-0 shadow-sm">
                             <svg class="w-8 h-8" viewBox="0 0 24 24">
                                 <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
                                 <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.11-6.72-4.96H1.29v3.14C3.26 21.3 7.31 24 12 24z"/>
@@ -604,13 +576,13 @@
                         </div>
                         <div>
                             <div class="flex flex-wrap items-center gap-2.5">
-                                <span class="font-display text-2xl sm:text-3xl font-bold text-stone-100">4.9 / 5.0</span>
+                                <span class="font-display text-2xl sm:text-3xl font-bold text-brand-950">4.9 / 5.0</span>
                                 <span class="text-amber-500 text-xl tracking-tight" aria-label="5 sterren">★★★★★</span>
-                                <span class="text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded bg-charcoal-900 border border-charcoal-700 text-stone-300">
+                                <span class="text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded bg-ice-100 border border-ice-200 text-brand-700">
                                     140+ Google Beoordelingen
                                 </span>
                             </div>
-                            <p class="text-stone-400 text-sm mt-1">
+                            <p class="text-slate-600 text-sm mt-1">
                                 Waarom mannen uit Breda en omstreken vaste klant zijn bij Kapper Karim aan de Haagdijk.
                             </p>
                         </div>
@@ -619,49 +591,31 @@
                     <div class="flex flex-wrap items-center gap-3 w-full lg:w-auto">
                         <a href="https://www.google.com/maps/search/?api=1&query=Kapper+Karim+Haagdijk+125+Breda" 
                            target="_blank" 
-                           rel="noopener noreferrer"
-                           class="inline-flex items-center justify-center gap-2 bg-charcoal-900 hover:bg-charcoal-700 text-stone-100 border border-charcoal-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors w-full sm:w-auto">
+                           rel="noopener noreferrer" 
+                           class="inline-flex items-center justify-center gap-2 bg-ice-50 hover:bg-ice-100 text-slate-800 border border-ice-200 font-semibold text-sm px-5 py-3 rounded-lg transition-colors w-full sm:w-auto shadow-sm">
                             <span>Bekijk op Google Maps</span>
-                            <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
                             </svg>
                         </a>
                     </div>
                 </div>
 
-                <!-- =========================================================================
-                     OPTIE A: EXTERNE GOOGLE REVIEW WIDGET CONTAINER (ELFSIGHT / TRUSTMARY / EMBEDSOCIAL)
-                     Instructie voor beheerder: Plak hieronder jouw externe widget script-code 
-                     als je automatische live synchronisatie wilt gebruiken.
-                ========================================================================== -->
-                <div id="google-reviews-widget-placeholder" class="hidden mb-8 p-6 rounded-xl bg-charcoal-800 border border-dashed border-amber-600/50 text-sm text-stone-300">
-                    <!-- 
-                        PLAK HIER JE ELFSIGHT, EMBEDSOCIAL OF TRUSTMARY GOOGLE REVIEWS CODE:
-                        Voorbeeld:
-                        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-                        <div class="elfsight-app-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"></div>
-                    -->
-                </div>
-
-                <!-- =========================================================================
-                     OPTIE B: ACTIEVE FALLBACK MET 3 AUTHENTIEKE GOOGLE REVIEW CARDS
-                ========================================================================== -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                     <!-- Review Card 1 -->
-                    <article class="bg-charcoal-800 border border-charcoal-700 rounded-xl p-6 flex flex-col justify-between">
+                    <article class="bg-white border border-ice-200 rounded-xl p-6 flex flex-col justify-between shadow-sm">
                         <div>
                             <div class="flex items-center justify-between mb-4">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-full bg-amber-600 text-charcoal-950 font-bold flex items-center justify-center text-sm">
-                                        MV
+                                    <div class="w-10 h-10 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-sm shadow-sm">
+                                        TD
                                     </div>
                                     <div>
-                                        <h3 class="text-sm font-bold text-stone-100">Tim van Dongen</h3>
-                                        <span class="text-xs text-stone-400">2 weken geleden • Local Guide</span>
+                                        <h3 class="text-sm font-bold text-brand-950">Tim van Dongen</h3>
+                                        <span class="text-xs text-slate-500">2 weken geleden • Local Guide</span>
                                     </div>
                                 </div>
-                                <!-- Google G icoontje -->
                                 <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" aria-hidden="true">
                                     <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
                                     <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.11-6.72-4.96H1.29v3.14C3.26 21.3 7.31 24 12 24z"/>
@@ -670,26 +624,26 @@
                                 </svg>
                             </div>
                             <div class="text-amber-500 text-sm mb-3" aria-label="5 van de 5 sterren">★★★★★</div>
-                            <p class="text-sm text-stone-300 leading-relaxed">
+                            <p class="text-sm text-slate-600 leading-relaxed">
                                 "Al ruim twee jaar mijn vaste kapper op de Haagdijk. Karim neemt echt de tijd voor je en zet zonder twijfel de strakste skin fade van Breda. Geen gehaast, lekkere bak koffie bij binnenkomst en altijd een goede sfeer."
                             </p>
                         </div>
-                        <div class="mt-4 pt-3 border-t border-charcoal-700 text-xs text-stone-400">
+                        <div class="mt-4 pt-3 border-t border-ice-200 text-xs text-slate-500 font-medium">
                             Behandeling: Skin Fade &amp; Contouren
                         </div>
                     </article>
 
                     <!-- Review Card 2 -->
-                    <article class="bg-charcoal-800 border border-charcoal-700 rounded-xl p-6 flex flex-col justify-between">
+                    <article class="bg-white border border-ice-200 rounded-xl p-6 flex flex-col justify-between shadow-sm">
                         <div>
                             <div class="flex items-center justify-between mb-4">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-full bg-stone-700 text-stone-100 font-bold flex items-center justify-center text-sm">
+                                    <div class="w-10 h-10 rounded-full bg-brand-700 text-white font-bold flex items-center justify-center text-sm shadow-sm">
                                         YB
                                     </div>
                                     <div>
-                                        <h3 class="text-sm font-bold text-stone-100">Youssef Benali</h3>
-                                        <span class="text-xs text-stone-400">1 maand geleden</span>
+                                        <h3 class="text-sm font-bold text-brand-950">Youssef Benali</h3>
+                                        <span class="text-xs text-slate-500">1 maand geleden</span>
                                     </div>
                                 </div>
                                 <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" aria-hidden="true">
@@ -700,26 +654,26 @@
                                 </svg>
                             </div>
                             <div class="text-amber-500 text-sm mb-3" aria-label="5 van de 5 sterren">★★★★★</div>
-                            <p class="text-sm text-stone-300 leading-relaxed">
+                            <p class="text-sm text-slate-600 leading-relaxed">
                                 "Combi knippen en baard gedaan. De contouren met het mes en de warme handdoek maken het echt af. Je merkt direct dat hier vakmensen staan die oog hebben voor detail. Prijs-kwaliteit is top."
                             </p>
                         </div>
-                        <div class="mt-4 pt-3 border-t border-charcoal-700 text-xs text-stone-400">
+                        <div class="mt-4 pt-3 border-t border-ice-200 text-xs text-slate-500 font-medium">
                             Behandeling: Combi Knippen &amp; Baard
                         </div>
                     </article>
 
                     <!-- Review Card 3 -->
-                    <article class="bg-charcoal-800 border border-charcoal-700 rounded-xl p-6 flex flex-col justify-between">
+                    <article class="bg-white border border-ice-200 rounded-xl p-6 flex flex-col justify-between shadow-sm">
                         <div>
                             <div class="flex items-center justify-between mb-4">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-full bg-amber-700 text-stone-100 font-bold flex items-center justify-center text-sm">
+                                    <div class="w-10 h-10 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center text-sm shadow-sm">
                                         RJ
                                     </div>
                                     <div>
-                                        <h3 class="text-sm font-bold text-stone-100">Rick Janssen</h3>
-                                        <span class="text-xs text-stone-400">3 weken geleden</span>
+                                        <h3 class="text-sm font-bold text-brand-950">Rick Janssen</h3>
+                                        <span class="text-xs text-slate-500">3 weken geleden</span>
                                     </div>
                                 </div>
                                 <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" aria-hidden="true">
@@ -730,11 +684,11 @@
                                 </svg>
                             </div>
                             <div class="text-amber-500 text-sm mb-3" aria-label="5 van de 5 sterren">★★★★★</div>
-                            <p class="text-sm text-stone-300 leading-relaxed">
+                            <p class="text-sm text-slate-600 leading-relaxed">
                                 "Zaterdagochtend samen met mijn zoontje binnengelopen. Super vriendelijk geholpen, allebei strak geknipt en binnen een half uur stonden we weer fris buiten op de Haagdijk. Aanrader!"
                             </p>
                         </div>
-                        <div class="mt-4 pt-3 border-t border-charcoal-700 text-xs text-stone-400">
+                        <div class="mt-4 pt-3 border-t border-ice-200 text-xs text-slate-500 font-medium">
                             Behandeling: Heren Knippen &amp; Kind
                         </div>
                     </article>
@@ -743,7 +697,7 @@
             </div>
         </section>
 
-        <!-- ==========================================
+     <!-- ==========================================
              6. OPENINGSTIJDEN & LOCATIE (HAAGDIJK 125)
         =========================================== -->
         <section id="locatie" class="py-20 lg:py-28 bg-charcoal-950 border-b border-charcoal-700">
@@ -754,75 +708,75 @@
                     <!-- Linker Kolom: Openingstijden & Adres/Parkeerinfo -->
                     <div class="lg:col-span-5 space-y-8">
                         <div>
-                            <span class="text-amber-500 text-xs font-bold uppercase tracking-[0.2em] block mb-2">Bezoek Onze Barbershop</span>
-                            <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase tracking-tight text-stone-100">
+                            <span class="text-brand-600 text-xs font-bold uppercase tracking-[0.2em] block mb-2">Bezoek Onze Barbershop</span>
+                            <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase tracking-tight text-brand-950">
                                 Openingstijden &amp; Locatie
                             </h2>
                         </div>
 
-                        <!-- Openingstijden Kaart (JS markeert automatisch de huidige dag) -->
-                        <div class="bg-charcoal-800 border border-charcoal-700 rounded-xl p-6">
-                            <h3 class="font-display text-lg uppercase tracking-wider text-stone-100 mb-4 flex items-center justify-between">
+                        <!-- Openingstijden Kaart -->
+                        <div class="bg-white border border-ice-200 rounded-2xl p-6 shadow-sm">
+                            <h3 class="font-display text-lg uppercase tracking-wider text-brand-950 mb-4 flex items-center justify-between">
                                 <span>Openingstijden</span>
-                                <span class="text-xs font-sans font-normal text-amber-500">Inloop &amp; op afspraak</span>
+                                <span class="text-xs font-sans font-normal text-brand-600 font-semibold">Inloop &amp; op afspraak</span>
                             </h3>
                             <ul id="opening-hours-list" class="space-y-2.5 text-sm">
-                                <li data-day="1" class="flex justify-between py-1.5 px-2.5 rounded transition-colors text-stone-300">
+                                <li data-day="1" class="flex justify-between py-2 px-3 rounded-lg transition-colors text-slate-700">
                                     <span>Maandag</span>
-                                    <span class="font-medium">10:00 – 18:00</span>
+                                    <span class="font-medium">12:00 – 18:30</span>
                                 </li>
-                                <li data-day="2" class="flex justify-between py-1.5 px-2.5 rounded transition-colors text-stone-300">
+                                <li data-day="2"class="flex justify-between py-2 px-3 rounded-lg transition-colors text-slate-700">
                                     <span>Dinsdag</span>
-                                    <span class="font-medium">09:00 – 18:00</span>
+                                    <span class="font-medium">10:00 – 18:30</span>
                                 </li>
-                                <li data-day="3" class="flex justify-between py-1.5 px-2.5 rounded transition-colors text-stone-300">
+                                <li data-day="3" class="flex justify-between py-2 px-3 rounded-lg transition-colors text-slate-400">
                                     <span>Woensdag</span>
-                                    <span class="font-medium">09:00 – 18:00</span>
+                                    <span class="font-medium">Gesloten</span>
                                 </li>
-                                <li data-day="4" class="flex justify-between py-1.5 px-2.5 rounded transition-colors text-stone-300">
-                                    <span>Donderdag (Koopavond)</span>
-                                    <span class="font-medium">09:00 – 20:00</span>
+                                <li data-day="4" class="flex justify-between py-2 px-3 rounded-lg transition-colors text-slate-700">
+                                    <span>Donderdag</span>
+                                    <span class="font-medium">10:00 – 19:00</span>
                                 </li>
-                                <li data-day="5" class="flex justify-between py-1.5 px-2.5 rounded transition-colors text-stone-300">
+                                <li data-day="5" class="flex justify-between py-2 px-3 rounded-lg transition-colors text-slate-700">
                                     <span>Vrijdag</span>
-                                    <span class="font-medium">09:00 – 19:00</span>
+                                    <span class="font-medium">10:00 – 18:30</span>
                                 </li>
-                                <li data-day="6" class="flex justify-between py-1.5 px-2.5 rounded transition-colors text-stone-300">
+                                <li data-day="6" class="flex justify-between py-2 px-3 rounded-lg transition-colors text-slate-700">
                                     <span>Zaterdag</span>
-                                    <span class="font-medium">08:30 – 17:30</span>
+                                    <span class="font-medium">10:00 – 18:30</span>
                                 </li>
-                                <li data-day="0" class="flex justify-between py-1.5 px-2.5 rounded transition-colors text-stone-400">
+                                <li data-day="0" class="flex justify-between py-2 px-3 rounded-lg transition-colors text-slate-400">
                                     <span>Zondag</span>
                                     <span class="font-medium">Gesloten</span>
                                 </li>
                             </ul>
                         </div>
 
-                        <!-- Adres & Praktische Parkeertip Haagdijk -->
-                        <div class="bg-charcoal-800 border border-charcoal-700 rounded-xl p-6 space-y-4">
+                       <!-- Adres & Parkeerinfo -->
+                        <div class="bg-white border border-ice-200 rounded-2xl p-6 space-y-4 shadow-sm">
                             <div class="flex items-start gap-3.5">
-                                <div class="w-9 h-9 rounded-lg bg-charcoal-900 border border-charcoal-700 flex items-center justify-center text-amber-500 shrink-0 mt-0.5">
+                                <div class="w-10 h-10 rounded-lg bg-ice-100 border border-ice-200 flex items-center justify-center text-brand-600 shrink-0 mt-0.5">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-stone-100 text-sm">Adres</h4>
-                                    <p class="text-sm text-stone-300 mt-0.5">Haagdijk 125, 4811 TR Breda</p>
+                                    <h4 class="font-bold text-brand-950 text-sm">Adres</h4>
+                                    <p class="text-sm text-slate-600 mt-0.5">Haagdijk 125, 4811 TR Breda</p>
                                 </div>
                             </div>
 
                             <div class="flex items-start gap-3.5">
-                                <div class="w-9 h-9 rounded-lg bg-charcoal-900 border border-charcoal-700 flex items-center justify-center text-amber-500 shrink-0 mt-0.5">
+                                <div class="w-10 h-10 rounded-lg bg-ice-100 border border-ice-200 flex items-center justify-center text-brand-600 shrink-0 mt-0.5">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/>
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-stone-100 text-sm">Parkeren &amp; Bereikbaarheid</h4>
-                                    <p class="text-sm text-stone-300 mt-0.5 leading-relaxed">
-                                        Betaald parkeren kan direct voor de deur in de parkeervakken op de Haagdijk of op 3 minuten loopafstand in parkeergarage <strong class="text-stone-200">De Prins</strong>. De fiets zet je direct voor de zaak.
+                                    <h4 class="font-bold text-brand-950 text-sm">Parkeren &amp; Bereikbaarheid</h4>
+                                    <p class="text-sm text-slate-600 mt-0.5 leading-relaxed">
+                                        Betaald parkeren kan direct voor de deur in de parkeervakken op de Haagdijk of bij de <strong class="text-slate-800">Albert Heijn</strong>. De fiets zet je direct voor de zaak.
                                     </p>
                                 </div>
                             </div>
@@ -830,26 +784,26 @@
                     </div>
 
                     <!-- Rechter Kolom: Google Maps Iframe gecentreerd op Haagdijk 125 Breda -->
-                    <div class="lg:col-span-7">
-                        <div class="bg-charcoal-800 border border-charcoal-700 rounded-xl p-3 shadow-xl">
-                            <div class="relative w-full h-[420px] sm:h-[500px] rounded-lg overflow-hidden bg-charcoal-900">
+                  <div class="lg:col-span-7">
+                        <div class="bg-white border border-ice-200 rounded-2xl p-3 shadow-md">
+                            <div class="relative w-full h-[420px] sm:h-[500px] rounded-xl overflow-hidden bg-ice-50">
                                 <iframe 
                                     title="Locatie Kapper Karim Haagdijk 125 Breda op Google Maps"
-                                    src="https://maps.google.com/maps?q=Haagdijk%20125,%204811%20TR%20Breda&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                                    class="w-full h-full border-0 map-dark-filter"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2478.955771674357!2d4.76635347716436!3d51.58737397183155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c69f8832086b6f%3A0xfc4efd511c75c9ff!2sHeren%20Kapper%20Karim!5e0!3m2!1snl!2snl!4v1793368343329!5m2!1snl!2snl"
+                                    class="w-full h-full border-0"
                                     loading="lazy"
                                     referrerpolicy="no-referrer-when-downgrade">
                                 </iframe>
                             </div>
                             <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-3 pt-4 pb-1">
                                 <div>
-                                    <p class="text-sm font-bold text-stone-100">Kapper Karim • Haagdijk 125, 4811 TR Breda</p>
-                                    <p class="text-xs text-stone-400">Beweeg over de kaart om deze in volledige kleur te bekijken</p>
+                                    <p class="text-sm font-bold text-brand-950">Kapper Karim • Haagdijk 125, 4811 TR Breda</p>
+                                    <p class="text-xs text-slate-500">Midden in het centrum van Breda</p>
                                 </div>
                                 <a href="https://www.google.com/maps/dir/?api=1&destination=Haagdijk+125+4811+TR+Breda" 
                                    target="_blank" 
-                                   rel="noopener noreferrer"
-                                   class="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-charcoal-950 font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg transition-colors shrink-0">
+                                   rel="noopener noreferrer" 
+                                   class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg transition-colors shrink-0 shadow-sm">
                                     <span>Start Navigatie</span>
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
@@ -870,69 +824,69 @@
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div class="text-center mb-12">
-                    <span class="text-amber-500 text-xs font-bold uppercase tracking-[0.2em] block mb-2">Afspraak of Vraag</span>
-                    <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase tracking-tight text-stone-100">
+                    <span class="text-brand-600 text-xs font-bold uppercase tracking-[0.2em] block mb-2">Afspraak of Vraag</span>
+                    <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase tracking-tight text-brand-950">
                         Reserveer je Stoel of Bel Direct
                     </h2>
-                    <p class="text-stone-400 text-sm sm:text-base max-w-xl mx-auto mt-3">
+                    <p class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto mt-3">
                         Wil je voor vandaag nog weten of er direct plek is? Bel ons dan even op. Voor overige dagen of vragen kun je ook onderstaand formulier invullen.
                     </p>
                 </div>
 
-                <!-- Snelle Bel- & WhatsApp-knoppen boven het formulier -->
+                <!-- Snelle Bel- & WhatsApp-knoppen -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                    <a href="tel:0761234567" class="flex items-center justify-center gap-3 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 p-4 rounded-xl text-stone-100 font-semibold transition-colors">
-                        <span class="w-10 h-10 rounded-lg bg-amber-600/20 text-amber-500 flex items-center justify-center">
+                    <a href="tel:0659118829" class="flex items-center justify-center gap-3 bg-white hover:bg-ice-50 border border-ice-200 p-4 rounded-xl text-slate-800 font-semibold transition-colors shadow-sm">
+                        <span class="w-10 h-10 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
                             </svg>
                         </span>
                         <div class="text-left">
-                            <span class="block text-xs text-stone-400">Snelste manier voor vandaag</span>
-                            <span class="text-sm sm:text-base font-bold">Bel: 076 - 123 45 67</span>
+                            <span class="block text-xs text-slate-500 font-normal">Snelste manier voor vandaag</span>
+                            <span class="text-sm sm:text-base font-bold text-brand-950">Bel: 06 - 59 11 88 29</span>
                         </div>
                     </a>
 
-                    <a href="https://wa.me/31612345678?text=Hoi%20Karim,%20ik%20wil%20graag%20een%20afspraak%20maken." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 p-4 rounded-xl text-stone-100 font-semibold transition-colors">
-                        <span class="w-10 h-10 rounded-lg bg-emerald-600/20 text-emerald-400 flex items-center justify-center">
+                    <a href="https://wa.me/31659118829?text=Hoi%20Karim,%20ik%20wil%20graag%20een%20afspraak%20maken." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 bg-white hover:bg-ice-50 border border-ice-200 p-4 rounded-xl text-slate-800 font-semibold transition-colors shadow-sm">
+                        <span class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
                             </svg>
                         </span>
                         <div class="text-left">
-                            <span class="block text-xs text-stone-400">Stuur een berichtje</span>
-                            <span class="text-sm sm:text-base font-bold">WhatsApp Kapper Karim</span>
+                            <span class="block text-xs text-slate-500 font-normal">Stuur een berichtje</span>
+                            <span class="text-sm sm:text-base font-bold text-brand-950">WhatsApp Kapper Karim</span>
                         </div>
                     </a>
                 </div>
 
-                <!-- Netlify-ready Formulier -->
-                <div class="bg-charcoal-800 border border-charcoal-700 rounded-xl p-6 sm:p-10 shadow-xl">
+                <!-- Formulier -->
+                <div class="bg-white border border-ice-200 rounded-2xl p-6 sm:p-10 shadow-md">
                     <form id="booking-form" name="contact-kapper-karim" method="POST" data-netlify="true" class="space-y-6">
                         <input type="hidden" name="form-name" value="contact-kapper-karim">
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <!-- Naam -->
                             <div>
-                                <label for="naam" class="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-2">Jouw Naam *</label>
-                                <input type="text" id="naam" name="naam" required placeholder="Bijv. Karim El Amrani" 
-                                       class="w-full rounded-lg bg-charcoal-900 border border-charcoal-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-sm text-stone-100 placeholder-stone-500 transition-colors">
+                                <label for="naam" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Jouw Naam *</label>
+                                <input type="text" id="naam" name="naam" required placeholder="Uw naam" 
+                                       class="w-full rounded-lg bg-ice-50 border border-ice-200 focus:border-brand-600 focus:bg-white focus:outline-none px-4 py-3 text-sm text-slate-900 placeholder-slate-400 transition-colors">
                             </div>
 
                             <!-- Telefoonnummer -->
                             <div>
-                                <label for="telefoon" class="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-2">Telefoonnummer *</label>
-                                <input type="tel" id="telefoon" name="telefoon" required placeholder="06 - 12345678" 
-                                       class="w-full rounded-lg bg-charcoal-900 border border-charcoal-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-sm text-stone-100 placeholder-stone-500 transition-colors">
+                                <label for="telefoon" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Telefoonnummer *</label>
+                                <input type="tel" id="telefoon" name="telefoon" required placeholder="0659118829" 
+                                       class="w-full rounded-lg bg-ice-50 border border-ice-200 focus:border-brand-600 focus:bg-white focus:outline-none px-4 py-3 text-sm text-slate-900 placeholder-slate-400 transition-colors">
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <!-- Gewenste behandeling -->
                             <div>
-                                <label for="behandeling" class="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-2">Gewenste Behandeling *</label>
+                                <label for="behandeling" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Gewenste Behandeling *</label>
                                 <select id="behandeling" name="behandeling" required
-                                        class="w-full rounded-lg bg-charcoal-900 border border-charcoal-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-sm text-stone-100 transition-colors">
+                                        class="w-full rounded-lg bg-ice-50 border border-ice-200 focus:border-brand-600 focus:bg-white focus:outline-none px-4 py-3 text-sm text-slate-900 transition-colors">
                                     <option value="Combi: Knippen & Baard (€ 38,-)">Combi: Knippen &amp; Baard (€ 38,-)</option>
                                     <option value="Skin Fade / Opscheren (€ 27,-)">Skin Fade / Opscheren (€ 27,-)</option>
                                     <option value="Heren Knippen (€ 25,-)">Heren Knippen (€ 25,-)</option>
@@ -944,26 +898,26 @@
 
                             <!-- Voorkeursdag / Tijdstip -->
                             <div>
-                                <label for="voorkeursmoment" class="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-2">Voorkeursdag &amp; Tijdstip</label>
+                                <label for="voorkeursmoment" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Voorkeursdag &amp; Tijdstip</label>
                                 <input type="text" id="voorkeursmoment" name="voorkeursmoment" placeholder="Bijv. Donderdag rond 17:00" 
-                                       class="w-full rounded-lg bg-charcoal-900 border border-charcoal-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-sm text-stone-100 placeholder-stone-500 transition-colors">
+                                       class="w-full rounded-lg bg-ice-50 border border-ice-200 focus:border-brand-600 focus:bg-white focus:outline-none px-4 py-3 text-sm text-slate-900 placeholder-slate-400 transition-colors">
                             </div>
                         </div>
 
                         <!-- Bericht / Vraag -->
                         <div>
-                            <label for="bericht" class="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-2">Opmerking of Vraag (optioneel)</label>
+                            <label for="bericht" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Opmerking of Vraag (optioneel)</label>
                             <textarea id="bericht" name="bericht" rows="3" placeholder="Specifieke wensen of vragen..." 
-                                      class="w-full rounded-lg bg-charcoal-900 border border-charcoal-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-sm text-stone-100 placeholder-stone-500 transition-colors"></textarea>
+                                      class="w-full rounded-lg bg-ice-50 border border-ice-200 focus:border-brand-600 focus:bg-white focus:outline-none px-4 py-3 text-sm text-slate-900 placeholder-slate-400 transition-colors"></textarea>
                         </div>
 
                         <!-- Submit Knop -->
-                        <button type="submit" class="w-full bg-amber-600 hover:bg-amber-500 text-charcoal-950 font-bold text-base py-4 px-6 rounded-lg transition-all shadow-md">
+                        <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold text-base py-4 px-6 rounded-lg transition-all shadow-md">
                             Verstuur Aanvraag
                         </button>
 
-                        <!-- In-page Bevestigingsmelding (Geen alert()) -->
-                        <div id="form-feedback" class="hidden p-4 rounded-lg bg-emerald-950/80 border border-emerald-600 text-emerald-200 text-sm">
+                        <!-- Bevestigingsmelding -->
+                        <div id="form-feedback" class="hidden p-4 rounded-lg bg-emerald-50 border border-emerald-300 text-emerald-800 text-sm">
                             Bedankt! Je aanvraag voor Kapper Karim is ontvangen. We nemen snel telefonisch of via WhatsApp contact met je op om het tijdstip te bevestigen.
                         </div>
                     </form>
@@ -976,28 +930,28 @@
     <!-- ==========================================
          8. FOOTER
     =========================================== -->
-    <footer class="bg-charcoal-950 border-t border-charcoal-700 py-12 text-sm text-stone-400">
+    <footer class="bg-white border-t border-ice-200 py-12 text-sm text-slate-600">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-8 border-b border-charcoal-800">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-8 border-b border-ice-200">
                 <div>
-                    <span class="font-display text-xl font-bold tracking-wider text-stone-100 block">
-                        KAPPER <span class="text-amber-600">KARIM</span>
+                    <span class="font-display text-xl font-bold tracking-wider text-brand-950 block">
+                        KAPPER <span class="text-brand-600">KARIM</span>
                     </span>
-                    <p class="text-xs text-stone-400 mt-1">
+                    <p class="text-xs text-slate-500 mt-1">
                         Authentieke Herenkapper &amp; Barbershop • Haagdijk 125, 4811 TR Breda
                     </p>
                 </div>
 
-                <div class="flex flex-wrap gap-6 text-xs font-medium uppercase tracking-wider text-stone-300">
-                    <a href="#diensten" class="hover:text-amber-500 transition-colors">Tarieven</a>
-                    <a href="#impressie" class="hover:text-amber-500 transition-colors">Impressie</a>
-                    <a href="#reviews" class="hover:text-amber-500 transition-colors">Reviews</a>
-                    <a href="#locatie" class="hover:text-amber-500 transition-colors">Openingstijden</a>
-                    <a href="#contact" class="hover:text-amber-500 transition-colors">Contact</a>
+                <div class="flex flex-wrap gap-6 text-xs font-semibold uppercase tracking-wider text-slate-700">
+                    <a href="#diensten" class="hover:text-brand-600 transition-colors">Tarieven</a>
+                    <a href="#impressie" class="hover:text-brand-600 transition-colors">Impressie</a>
+                    <a href="#reviews" class="hover:text-brand-600 transition-colors">Reviews</a>
+                    <a href="#locatie" class="hover:text-brand-600 transition-colors">Openingstijden</a>
+                    <a href="#contact" class="hover:text-brand-600 transition-colors">Contact</a>
                 </div>
             </div>
 
-            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
                 <p>&copy; 2026 Kapper Karim Breda. Alle rechten voorbehouden.</p>
                 <p>Vakmanschap aan de Haagdijk in Breda.</p>
             </div>
@@ -1042,7 +996,7 @@
                 });
             });
 
-            // 2. Huidige dag markeren in het openingstijden overzicht + Live Status Badge
+            // 2. Huidige dag markeren + Live Status
             const now = new Date();
             const currentDay = now.getDay(); // 0 = Zondag, 1 = Maandag, ..., 6 = Zaterdag
             const currentHour = now.getHours() + (now.getMinutes() / 60);
@@ -1050,23 +1004,23 @@
             const dayRows = document.querySelectorAll('#opening-hours-list li');
             dayRows.forEach(row => {
                 if (parseInt(row.getAttribute('data-day'), 10) === currentDay) {
-                    row.classList.add('bg-charcoal-900', 'border', 'border-amber-600/50', 'text-amber-500', 'font-semibold');
+                    row.classList.add('bg-brand-100', 'border', 'border-brand-300', 'text-brand-950', 'font-bold');
                     const firstSpan = row.querySelector('span:first-child');
                     if (firstSpan) {
-                        firstSpan.innerHTML += ' <span class="text-[11px] uppercase tracking-wider bg-amber-600 text-charcoal-950 px-1.5 py-0.5 rounded ml-1.5 font-bold">Vandaag</span>';
+                        firstSpan.innerHTML += ' <span class="text-[11px] uppercase tracking-wider bg-brand-600 text-white px-1.5 py-0.5 rounded ml-1.5 font-bold">Vandaag</span>';
                     }
                 }
             });
 
-            // Dynamische open/gesloten indicator in de Hero
+            // Actuele openingstijden
             const schedule = {
-                0: null,             // Zondag gesloten
-                1: [10.0, 18.0],     // Maandag
-                2: [9.0, 18.0],      // Dinsdag
-                3: [9.0, 18.0],      // Woensdag
-                4: [9.0, 20.0],      // Donderdag
-                5: [9.0, 19.0],      // Vrijdag
-                6: [8.5, 17.5]       // Zaterdag
+                0: null,            // Zondag: Gesloten
+                1: [12.0, 18.5],    // Maandag: 12:00 – 18:30
+                2: [10.0, 18.5],    // Dinsdag: 10:00 – 18:30
+                3: null,            // Woensdag: Gesloten
+                4: [10.0, 19.0],    // Donderdag: 10:00 – 19:00
+                5: [10.0, 18.5],    // Vrijdag: 10:00 – 18:30
+                6: [10.0, 18.5]     // Zaterdag: 10:00 – 18:30
             };
 
             const statusDot = document.getElementById('status-dot');
@@ -1078,15 +1032,17 @@
                     statusDot.className = 'w-2 h-2 rounded-full bg-emerald-500 animate-pulse';
                     statusText.textContent = 'Nu geopend • Loop gerust binnen';
                 } else if (todaysHours && currentHour < todaysHours[0]) {
-                    statusDot.className = 'w-2 h-2 rounded-full bg-amber-500';
-                    statusText.textContent = 'Vandaag geopend vanaf ' + (todaysHours[0] === 8.5 ? '08:30' : todaysHours[0] + ':00');
+                    statusDot.className = 'w-2 h-2 rounded-full bg-brand-600';
+                    const startH = Math.floor(todaysHours[0]);
+                    const startM = (todaysHours[0] % 1 === 0.5) ? '30' : '00';
+                    statusText.textContent = `Vandaag geopend vanaf ${startH}:${startM}`;
                 } else {
-                    statusDot.className = 'w-2 h-2 rounded-full bg-stone-500';
+                    statusDot.className = 'w-2 h-2 rounded-full bg-slate-400';
                     statusText.textContent = 'Momenteel gesloten • Bekijk openingstijden';
                 }
             }
 
-            // 3. Formulier afhandeling (werkt met Netlify én lokaal in VS Code Live Server)
+            // 3. Formulier afhandeling
             const bookingForm = document.getElementById('booking-form');
             const formFeedback = document.getElementById('form-feedback');
 
@@ -1100,9 +1056,7 @@
                         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                         body: new URLSearchParams(formData).toString()
                     })
-                    .catch(() => {
-                        // In lokale Live Server omgeving vangen we een 404/405 netjes op zodat de demo vloeiend werkt
-                    })
+                    .catch(() => {})
                     .finally(() => {
                         formFeedback.classList.remove('hidden');
                         bookingForm.reset();
@@ -1111,7 +1065,7 @@
             }
         });
 
-        // 4. Selecteer een dienst vanuit de prijzenkaart en scroll naar het formulier
+        // 4. Selecteer dienst en scroll
         function selectService(serviceName) {
             const selectEl = document.getElementById('behandeling');
             const contactSection = document.getElementById('contact');
