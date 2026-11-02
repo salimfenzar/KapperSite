@@ -10,8 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Tailwind CSS CDN -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%234361ee' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='2' width='96' height='96' rx='24' fill='%23edf2fa' stroke='%23d0ddec' stroke-width='4'/><circle cx='38' cy='32' r='10.5'/><circle cx='38' cy='68' r='10.5'/><line x1='46' y1='39' x2='74' y2='67'/><line x1='46' y1='61' x2='74' y2='33'/></svg>">    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Tailwind Configuratie afgestemd op het lichte bord met korenblauw/lavendelblauw -->
@@ -195,7 +194,7 @@
 
                         <!-- Introductie -->
                         <p class="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
-                            Geen haastwerk, maar eerlijk ambacht aan de Haagdijk in Breda. Bij Kapper Karim zit je goed voor een naadloze skin fade, een klassiek herenkapsel of een traditionele baardbehandeling met het open mes en een warme handdoek.
+                            Geen haastwerk, maar eerlijk ambacht aan de Haagdijk in Breda. Bij Kapper Karim zit je goed voor een goede fade, een klassiek herenkapsel en altijd een leuk praatje.
                         </p>
 
                         <!-- Twee actieknoppen -->
@@ -281,7 +280,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"/>
                             </svg>
                         </div>
-                        <span class="text-sm font-semibold text-slate-800">Traditioneel scheren met warme doek</span>
+                        <span class="text-sm font-semibold text-slate-800">Baard bijwerken/trimmen</span>
                     </div>
 
                     <div class="flex items-center gap-3">
@@ -380,27 +379,9 @@
                         </button>
                     </div>
 
-                    <!-- Kaart 4: Baard Trimmen & Contouren -->
-                    <div class="bg-white border border-ice-200 hover:border-brand-600/50 rounded-xl p-6 flex flex-col justify-between transition-all shadow-sm hover:shadow-md">
-                        <div>
-                            <div class="flex items-baseline justify-between gap-2 mb-3">
-                                <h3 class="font-display text-xl font-bold uppercase tracking-wide text-brand-950">Baard &amp; Hot Towel</h3>
-                                <span class="font-display text-2xl font-bold text-brand-600 shrink-0">€ 18,-</span>
-                            </div>
-                            <div class="price-dots h-1 w-full mb-4"></div>
-                            <span class="inline-block text-xs font-medium text-slate-600 bg-ice-50 border border-ice-200 px-2.5 py-1 rounded mb-3">
-                                ± 20 minuten
-                            </span>
-                            <p class="text-sm text-slate-600 leading-relaxed">
-                                Baard op lengte en symmetrisch in vorm brengen, strakke wang- en neklijnen uitscheren met het mes, warme handdoek en voedende baardbalsem.
-                            </p>
-                        </div>
-                        <button type="button" onclick="selectService('Baard Trimmen & Contouren (€ 18,-)')" class="mt-6 w-full py-2.5 px-4 rounded-lg bg-ice-50 hover:bg-brand-600 hover:text-white text-slate-800 border border-ice-200 hover:border-brand-600 text-sm font-semibold transition-all">
-                            Kies deze behandeling
-                        </button>
-                    </div>
+                
 
-                    <!-- Kaart 5: Kinderen / Jeugd -->
+                    <!-- Kaart 4: Kinderen / Jeugd -->
                     <div class="bg-white border border-ice-200 hover:border-brand-600/50 rounded-xl p-6 flex flex-col justify-between transition-all shadow-sm hover:shadow-md">
                         <div>
                             <div class="flex items-baseline justify-between gap-2 mb-3">
@@ -420,7 +401,7 @@
                         </button>
                     </div>
 
-                    <!-- Kaart 6: Contouren & Nek Bijwerken -->
+                    <!-- Kaart 5: Contouren & Nek Bijwerken -->
                     <div class="bg-white border border-ice-200 hover:border-brand-600/50 rounded-xl p-6 flex flex-col justify-between transition-all shadow-sm hover:shadow-md">
                         <div>
                             <div class="flex items-baseline justify-between gap-2 mb-3">
@@ -862,22 +843,21 @@
 
                 <!-- Formulier -->
                 <div class="bg-white border border-ice-200 rounded-2xl p-6 sm:p-10 shadow-md">
-                    <form id="booking-form" name="contact-kapper-karim" method="POST" data-netlify="true" class="space-y-6">
-                        <input type="hidden" name="form-name" value="contact-kapper-karim">
-
+                    <form id="booking-form" class="space-y-6">
+                        
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <!-- Naam -->
                             <div>
                                 <label for="naam" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Jouw Naam *</label>
                                 <input type="text" id="naam" name="naam" required placeholder="Uw naam" 
-                                       class="w-full rounded-lg bg-ice-50 border border-ice-200 focus:border-brand-600 focus:bg-white focus:outline-none px-4 py-3 text-sm text-slate-900 placeholder-slate-400 transition-colors">
+                                    class="w-full rounded-lg bg-ice-50 border border-ice-200 focus:border-brand-600 focus:bg-white focus:outline-none px-4 py-3 text-sm text-slate-900 placeholder-slate-400 transition-colors">
                             </div>
 
                             <!-- Telefoonnummer -->
                             <div>
-                                <label for="telefoon" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Telefoonnummer *</label>
-                                <input type="tel" id="telefoon" name="telefoon" required placeholder="0659118829" 
-                                       class="w-full rounded-lg bg-ice-50 border border-ice-200 focus:border-brand-600 focus:bg-white focus:outline-none px-4 py-3 text-sm text-slate-900 placeholder-slate-400 transition-colors">
+                                <label for="telefoon" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Telefoonnummer (optioneel)</label>
+                                <input type="tel" id="telefoon" name="telefoon" placeholder="06..." 
+                                    class="w-full rounded-lg bg-ice-50 border border-ice-200 focus:border-brand-600 focus:bg-white focus:outline-none px-4 py-3 text-sm text-slate-900 placeholder-slate-400 transition-colors">
                             </div>
                         </div>
 
@@ -898,29 +878,38 @@
 
                             <!-- Voorkeursdag / Tijdstip -->
                             <div>
-                                <label for="voorkeursmoment" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Voorkeursdag &amp; Tijdstip</label>
-                                <input type="text" id="voorkeursmoment" name="voorkeursmoment" placeholder="Bijv. Donderdag rond 17:00" 
-                                       class="w-full rounded-lg bg-ice-50 border border-ice-200 focus:border-brand-600 focus:bg-white focus:outline-none px-4 py-3 text-sm text-slate-900 placeholder-slate-400 transition-colors">
+                                <label for="voorkeursmoment" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Gewenste dag &amp; Tijdstip *</label>
+                                <input type="text" id="voorkeursmoment" name="voorkeursmoment" required placeholder="Bijv. Donderdag rond 17:00" 
+                                    class="w-full rounded-lg bg-ice-50 border border-ice-200 focus:border-brand-600 focus:bg-white focus:outline-none px-4 py-3 text-sm text-slate-900 placeholder-slate-400 transition-colors">
                             </div>
                         </div>
 
                         <!-- Bericht / Vraag -->
                         <div>
                             <label for="bericht" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Opmerking of Vraag (optioneel)</label>
-                            <textarea id="bericht" name="bericht" rows="3" placeholder="Specifieke wensen of vragen..." 
-                                      class="w-full rounded-lg bg-ice-50 border border-ice-200 focus:border-brand-600 focus:bg-white focus:outline-none px-4 py-3 text-sm text-slate-900 placeholder-slate-400 transition-colors"></textarea>
+                            <textarea id="bericht" name="bericht" rows="3" placeholder="Eventuele specifieke wensen of opmerkingen..." 
+                                    class="w-full rounded-lg bg-ice-50 border border-ice-200 focus:border-brand-600 focus:bg-white focus:outline-none px-4 py-3 text-sm text-slate-900 placeholder-slate-400 transition-colors"></textarea>
                         </div>
 
+                        <!-- Duidelijke disclaimer -->
+                        <p class="text-xs text-slate-500 bg-amber-50 border border-amber-200 p-3 rounded-lg">
+                            <strong>Let op:</strong> Dit is een aanvraag en nog geen definitieve afspraak. Karim controleert eerst of er plek is op het gewenste moment en stuurt je een reactie via WhatsApp.
+                        </p>
+
                         <!-- Submit Knop -->
-                        <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold text-base py-4 px-6 rounded-lg transition-all shadow-md">
-                            Verstuur Aanvraag
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base py-4 px-6 rounded-lg transition-all shadow-md flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+                            </svg>
+                            Verstuur Afspraakverzoek via WhatsApp
                         </button>
 
                         <!-- Bevestigingsmelding -->
                         <div id="form-feedback" class="hidden p-4 rounded-lg bg-emerald-50 border border-emerald-300 text-emerald-800 text-sm">
-                            Bedankt! Je aanvraag voor Kapper Karim is ontvangen. We nemen snel telefonisch of via WhatsApp contact met je op om het tijdstip te bevestigen.
+                            WhatsApp wordt geopend met jouw verzoek! Bevestig daar nog even het bericht om het te versturen.
                         </div>
                     </form>
+                </div>
                 </div>
 
             </div>
@@ -1042,28 +1031,47 @@
                 }
             }
 
-            // 3. Formulier afhandeling
+        // 3. Formulier afhandeling via WhatsApp
             const bookingForm = document.getElementById('booking-form');
             const formFeedback = document.getElementById('form-feedback');
 
             if (bookingForm) {
-                bookingForm.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    const formData = new FormData(bookingForm);
+    bookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-                    fetch('/', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: new URLSearchParams(formData).toString()
-                    })
-                    .catch(() => {})
-                    .finally(() => {
-                        formFeedback.classList.remove('hidden');
-                        bookingForm.reset();
-                    });
-                });
-            }
-        });
+        const naam = document.getElementById('naam').value.trim();
+        const telefoon = document.getElementById('telefoon').value.trim();
+        const behandeling = document.getElementById('behandeling').value;
+        const voorkeursmoment = document.getElementById('voorkeursmoment').value.trim();
+        const opmerking = document.getElementById('bericht').value.trim();
+
+        // Opbouw van het WhatsApp-bericht
+        let berichtTekst = `Hallo Karim,\n\n`;
+        berichtTekst += `Ik wil graag een verzoek doen voor een afspraak (onder voorbehoud van beschikbaarheid):\n\n`;
+        berichtTekst += `👤 *Naam:* ${naam}\n`;
+        if (telefoon) {
+            berichtTekst += `📞 *Telefoon:* ${telefoon}\n`;
+        }
+        berichtTekst += `✂️ *Behandeling:* ${behandeling}\n`;
+        berichtTekst += `🗓️ *Gewenst moment:* ${voorkeursmoment}\n`;
+        if (opmerking) {
+            berichtTekst += `💬 *Opmerking:* ${opmerking}\n`;
+        }
+        berichtTekst += `\nLaat maar weten of er op dat tijdstip plek is!`;
+
+        // Telefoonnummer Kapper Karim (internationaal formaat zonder leestekens)
+        const whatsappNummer = "31659118829";
+        const whatsappUrl = `https://wa.me/${whatsappNummer}?text=${encodeURIComponent(berichtTekst)}`;
+
+        // Toon melding en open WhatsApp
+        if (formFeedback) {
+            formFeedback.classList.remove('hidden');
+        }
+        window.open(whatsappUrl, '_blank');
+    });
+}
+});
+        
 
         // 4. Selecteer dienst en scroll
         function selectService(serviceName) {
@@ -1076,6 +1084,7 @@
                 contactSection.scrollIntoView({ behavior: 'smooth' });
             }
         }
+        
     </script>
 </body>
 </html>
