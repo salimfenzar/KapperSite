@@ -171,18 +171,21 @@
                     <!-- Linker kolom: Copy & CTA's -->
                     <div class="lg:col-span-7 space-y-6">
                         
-                        <!-- Locatie Badge + Dynamische Open/Gesloten Status -->
-                        <div class="inline-flex flex-wrap items-center gap-3 px-3.5 py-1.5 rounded-lg bg-white border border-ice-200 shadow-sm text-xs sm:text-sm text-slate-700">
+                       <!-- Locatie Badge + Dynamische Open/Gesloten Status -->
+                        <div class="inline-flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 px-3.5 py-2 rounded-lg bg-white border border-ice-200 shadow-sm text-xs sm:text-sm text-slate-700">
                             <span class="flex items-center gap-1.5 font-semibold text-brand-600">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
                                 </svg>
                                 Haagdijk 125 • Breda Centrum
                             </span>
-                            <span class="text-slate-300">|</span>
+                            
+                            <!-- Alleen zichtbaar op desktop (sm en groter) -->
+                            <span class="hidden sm:inline text-slate-300">|</span>
+                            
                             <span id="live-status-badge" class="flex items-center gap-1.5 font-medium text-slate-700">
-                                <span id="status-dot" class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                <span id="status-dot" class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
                                 <span id="status-text">Vandaag geopend</span>
                             </span>
                         </div>
